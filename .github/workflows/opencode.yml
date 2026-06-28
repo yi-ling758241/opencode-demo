@@ -20,5 +20,7 @@ jobs:
           persist-credentials: false
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         with:
-          model: anthropic/claude-sonnet-4-20250514
+          model: deepseek/deepseek-v4-pro
